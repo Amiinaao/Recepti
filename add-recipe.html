@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="add-recipe.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="grainy">     
+
+    <div class="navbar_container" style="background-color: #FFA07A;">
+        <div class="logged_in_navbar">
+            <h1 class="logo">Cooking</h1>
+            
+            <ul id="navbar_links">
+                <li><a href="homepage.html" class="navbar_link">Home</a></li>
+                <li><a href="dashboard.html" class="navbar_link">Dashboard</a></li>
+                <li><a href="add-recipe.html" class="navbar_link">Add Recipe</a></li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <div class="add_recipe_wrapper">
+            <div class="add_recipe_form_container">
+                <div class="add_recipe_flex">
+                    <form class="add_recipe_form">
+                        <h2 class="add_recipe_title">Add a recipe</h2>
+                        <input type="text" class="form_input" placeholder="Title" id="title" />
+                        <div class="form_select_wrapper">
+                            <select class="form_select" id="dificulty">
+                                <option value="easy" class="cookingTime_option">Easy</option>
+                                <option value="medium" class="cookingTime_option">Medium</option>
+                                <option value="intermediate" class="cookingTime_option">Intermediate</option>
+                                <option value="hard" class="cookingTime_option">Hard</option>
+                            </select>
+
+                            <select class="form_select" id="cookingTime">
+                                <option value="15" class="cookingTime_option">15 minutes or less</option>
+                                <option value="30" class="cookingTime_option">30 minutes</option>
+                                <option value="45" class="cookingTime_option">45 minutes</option>
+                                <option value="60" class="cookingTime_option">1 hour</option>
+                                <option value="90" class="cookingTime_option">1 hour and 30 minutes</option>
+                                <option value="120" class="cookingTime_option"">2 hours</option>
+                                <option value="150" class="cookingTime_option"">2 hours and 30 minutes</option>
+                                <option value="180" class="cookingTime_option"">3 hours</option>
+                            </select>
+                        </div>
+
+                        <textarea name="" id="instructions" placeholder="Instructions" class="form_textarea"></textarea>
+                        <div class="ingredients_container">
+                            <input type="text" id="ingredients" class="ingredients_input" placeholder="Ingredient"/>
+                            <input type="text" id="amount" class="ingredients_input" placeholder="Amount" />
+                            <div id="ingredients_button" onclick="addIngredient()">Add</div>
+                        </div>
+                        <div class="add_recipe_button" onclick="addRecipe()" type="submit">Submit</div>
+                        <div class="add_recipe_display_ingredients" id="add_recipe_display_ingredients">
+                            <p class="display_ingredients_title">Ingredients: </p>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="toast" class="hide">
+            <div id="toast_header">
+                <p onclick="hideToast()">X</p>
+                <p id="toast_header_text"></p>
+            </div>
+            <p id="toast_body_text"></p>
+        </div>
+    </div>
+    <script src="add-recipe.js"></script>
+    <script src="functions.js"></script>
+</body>
+</html>

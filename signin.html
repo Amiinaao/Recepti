@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Cooking Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="purple">
+
+    <div class="navbar_container">
+      <div class="logged_in_navbar">
+          <h1 class="logo">Cooking</h1>
+          
+          <ul id="navbar_links">
+              <li><a href="homepage.html" class="navbar_link">Home</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="max_width_wrapper">
+    <main class="center_container">
+      <form class="form_wrapper">
+        <div class="form" style="height: fit-content;">
+          <h2>Log in</h2>
+          <div class="input_wrapper">
+            <label class="input_label" for="email">Your e-mail</label>
+            <input type="email" class="input" id="email" placeholder="E-mail"/> 
+          </div>
+          <div class="input_wrapper">
+            <label class="input_label" for="password">Your password</label>
+            <input type="password" class="input" id="password" placeholder="Password"/> 
+          </div>
+          <div class="button" onclick="login()">Log in</div>
+        </div>
+
+        <div class="form" style="width: 32rem;">
+          <h2>Register</h2>
+          <div class="input_wrapper">
+            <label class="input_label" for="Firstname">First name</label>
+            <input type="text" class="input" id="Firstname" placeholder="First name"/> 
+          </div>        
+          <div class="input_wrapper">
+            <label class="input_label" for="Lastname">Last name</label>
+            <input type="text" class="input" id="Lastname" placeholder="Last name"/> 
+          </div>        
+          <div class="input_wrapper">
+            <label class="input_label" for="Username">Username</label>
+            <input type="text" class="input" id="username" placeholder="User name"/> 
+          </div>        
+          <div class="input_wrapper">
+            <label class="input_label" for="email">Your e-mail</label>
+            <input type="email" class="input" id="Email" placeholder="E-mail"/> 
+          </div>        
+          <div class="input_wrapper">
+            <label class="input_label" for="registerPassword">Password</label>
+            <input type="password" class="input" id="registerPassword" placeholder="Password"/> 
+          </div>
+          <div class="input_wrapper">
+            <label class="input_label" for="confirmPassword">Confirm password</label>
+            <input type="password" class="input" id="confirmPassword" placeholder="Confirm password"/> 
+          </div>
+          <div class="button" id="registerBtn" value="Register">Create an account</div>
+        </div>
+
+
+      </form>
+    </main>
+  </div>
+
+    
+
+    <div id="toast" class="hide">
+      <div id="toast_header">
+          <p onclick="hideToast()"><i class='bx bx-x' style='color:#ffffff'  ></i></p>
+          <p id="toast_header_text"></p>
+      </div>
+      <p id="toast_body_text"></p>
+  </div>
+
+    <script src="script.js"></script>
+    <script src="functions.js" ></script>
+  </body>
+</html>
